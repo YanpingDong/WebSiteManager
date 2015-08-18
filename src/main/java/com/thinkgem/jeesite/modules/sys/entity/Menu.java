@@ -141,24 +141,6 @@ public class Menu extends IdEntity<Menu> {
 		this.isShow = isShow;
 	}
 
-/*	@Length(min=1, max=1)
-	public String getIsActiviti() {
-		return isActiviti;
-	}
-
-	public void setIsActiviti(String isActiviti) {
-		this.isActiviti = isActiviti;
-	}*/
-
-/*	@Length(min=0, max=200)
-	public String getPermission() {
-		return permission;
-	}
-
-	public void setPermission(String permission) {
-		this.permission = permission;
-	}*/
-
 	@OneToMany(mappedBy = "parent", fetch=FetchType.LAZY)
 	@Where(clause="del_flag='"+DEL_FLAG_NORMAL+"'")
 	@OrderBy(value="sort") @Fetch(FetchMode.SUBSELECT)
@@ -172,18 +154,6 @@ public class Menu extends IdEntity<Menu> {
 		this.childList = childList;
 	}
 	
-/*	@ManyToMany(mappedBy = "menuList", fetch=FetchType.LAZY)
-	@Where(clause="del_flag='"+DEL_FLAG_NORMAL+"'")
-	@OrderBy("id") @Fetch(FetchMode.SUBSELECT)
-	@NotFound(action = NotFoundAction.IGNORE)
-	@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-	public List<Role> getRoleList() {
-		return roleList;
-	}
-	
-	public void setRoleList(List<Role> roleList) {
-		this.roleList = roleList;
-	}*/
 	
 	@Transient
 	public static void sortList(List<Menu> list, List<Menu> sourcelist, String parentId){
@@ -215,10 +185,6 @@ public class Menu extends IdEntity<Menu> {
 		return id != null && id.equals("1");
 	}
 	
-/*	@Transient
-	public String getActivitiGroupId() {
-		return ObjectUtils.toString(getPermission());
-	}*/
 
 	@Transient
 	public String getActivitiGroupName() {

@@ -18,8 +18,6 @@
 <script src="${ctxStatic}/select2/select2.js" type="text/javascript"></script>
 <script src="${ctxStatic}/select2/select2_locale_zh-CN.js" type="text/javascript"></script>
 <link href="${ctxStatic}/select2/select2.css" type="text/css" rel="stylesheet" />
-<link href="${ctxStatic}/x-editable/css/bootstrap-editable.css" type="text/css" rel="stylesheet" />
-<script src="${ctxStatic}/x-editable/js/bootstrap-editable.js" type="text/javascript"></script>
 <link href="${ctxStatic}/fancyBox/source/jquery.fancybox.css" type="text/css" rel="stylesheet" />
 <script src="${ctxStatic}/fancyBox/source/jquery.fancybox.js" type="text/javascript"></script>
 <link href="${ctxStatic}/common/jeesite.min.css" type="text/css" rel="stylesheet" />

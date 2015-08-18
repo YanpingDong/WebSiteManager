@@ -24,11 +24,6 @@ import com.google.common.collect.Maps;
 public abstract class BaseEntity<T> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-
-	/**
-	 * 当前用户
-	 */
-/*	protected User currentUser;*/
 	
 	/**
 	 * 当前实体分页对象
@@ -50,19 +45,6 @@ public abstract class BaseEntity<T> implements Serializable {
 	 */
 	private String ids;
 	
-/*	@JsonIgnore
-	@XmlTransient
-	@Transient
-	public User getCurrentUser() {
-		if(currentUser == null){
-			currentUser = UserUtils.getUser();
-		}
-		return currentUser;
-	}
-	
-	public void setCurrentUser(User currentUser) {
-		this.currentUser = currentUser;
-	}*/
 
 	@JsonIgnore
 	@XmlTransient

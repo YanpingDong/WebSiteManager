@@ -54,21 +54,12 @@ public abstract class DataEntity<T> extends BaseEntity<T> implements Serializabl
 	
 	@PrePersist
 	public void prePersist(){
-		/*User user = UserUtils.getUser();
-		if (StringUtils.isNotBlank(user.getId())){
-			this.updateBy = user;
-			this.createBy = user;
-		}*/
 		this.updateDate = new Date();
 		this.createDate = this.updateDate;
 	}
 	
 	@PreUpdate
 	public void preUpdate(){
-		/*User user = UserUtils.getUser();
-		if (StringUtils.isNotBlank(user.getId())){
-			this.updateBy = user;
-		}*/
 		this.updateDate = new Date();
 	}
 	
@@ -81,16 +72,6 @@ public abstract class DataEntity<T> extends BaseEntity<T> implements Serializabl
 		this.remarks = remarks;
 	}
 	
-	/*@JsonIgnore
-	@ManyToOne(fetch=FetchType.LAZY)
-	@NotFound(action = NotFoundAction.IGNORE)
-	public User getCreateBy() {
-		return createBy;
-	}
-
-	public void setCreateBy(User createBy) {
-		this.createBy = createBy;
-	}*/
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -102,16 +83,6 @@ public abstract class DataEntity<T> extends BaseEntity<T> implements Serializabl
 		this.createDate = createDate;
 	}
 
-	/*@JsonIgnore
-	@ManyToOne(fetch=FetchType.LAZY)
-	@NotFound(action = NotFoundAction.IGNORE)
-	public User getUpdateBy() {
-		return updateBy;
-	}
-
-	public void setUpdateBy(User updateBy) {
-		this.updateBy = updateBy;
-	}*/
 
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	@Field(index=Index.YES, analyze=Analyze.NO, store=Store.YES)
