@@ -34,10 +34,12 @@
 		classpath*:/spring-context*.xml
 	</param-value>
   </context-param>
+  <!-- Spring profile default configuration evn -->
   <context-param>
     <param-name>spring.profiles.default</param-name>
     <param-value>production</param-value>
   </context-param>
+  
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
@@ -65,20 +67,6 @@
     <filter-name>openSessionInViewFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-  
-  <!-- Apache Shiro -->
-  <!-- <filter>
-    <filter-name>shiroFilter</filter-name>
-    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-    <init-param>
-      <param-name>targetFilterLifecycle</param-name>
-      <param-value>true</param-value>
-    </init-param>
-  </filter>
-  <filter-mapping>
-    <filter-name>shiroFilter</filter-name>
-    <url-pattern>/*</url-pattern>
-  </filter-mapping> -->
   
   <!-- Ehcache 页面缓存，仅缓存首页和html为后缀的页面 （需要时取消注释）
   <filter>  
@@ -133,26 +121,6 @@
       <servlet-name>DruidStatView</servlet-name>
       <url-pattern>/druid/*</url-pattern>
   </servlet-mapping>
-  
-  <!-- 查看CKFinder的图片 
-  <servlet>
-  	<servlet-name>cKFinderFilesServlet</servlet-name>
-  	<servlet-class>com.thinkgem.jeesite.common.servlet.CKFinderFilesServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>cKFinderFilesServlet</servlet-name>
-  	<url-pattern>/userfiles/*</url-pattern>
-  </servlet-mapping>-->
-  
-  <!-- 随机验证码 -->
-  <!-- <servlet>
-    <servlet-name>ValidateCodeServlet</servlet-name>
-    <servlet-class>com.thinkgem.jeesite.common.servlet.ValidateCodeServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ValidateCodeServlet</servlet-name>
-    <url-pattern>/servlet/validateCodeServlet</url-pattern>
-  </servlet-mapping> -->
   
   <!-- Session 配置 -->
   <session-config>
