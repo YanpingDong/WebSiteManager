@@ -4,6 +4,7 @@
 <head>
 	<title>字典管理</title>
 	<meta name="decorator" content="default"/>
+	<!-- 调用点在page.java对象中，默认为page -->
 	<script type="text/javascript">
 		function page(n,s){
 			$("#pageNo").val(n);
