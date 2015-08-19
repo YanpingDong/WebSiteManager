@@ -5,6 +5,7 @@
 	<title>日志管理</title>
 	<meta name="decorator" content="default"/>
 	<script type="text/javascript">
+	<!-- 调用点在page.java对象中，默认为page -->
 		function page(n,s){
 			$("#pageNo").val(n);
 			$("#pageSize").val(s);

@@ -86,7 +86,7 @@ public class BaseDao<T> {
 	public BaseDao() {
 		entityClass = Reflections.getClassGenricType(getClass());
 	}
-
+	
 	/**
 	 * 获取 Session
 	 */

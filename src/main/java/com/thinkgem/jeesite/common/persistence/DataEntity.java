@@ -87,6 +87,7 @@ public abstract class DataEntity<T> extends BaseEntity<T> implements Serializabl
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	@Field(index=Index.YES, analyze=Analyze.NO, store=Store.YES)
 	@DateBridge(resolution = Resolution.DAY)
+	@Temporal(TemporalType.TIMESTAMP)
 	public Date getUpdateDate() {
 		return updateDate;
 	}
