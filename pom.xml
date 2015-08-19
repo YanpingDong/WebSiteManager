@@ -403,6 +403,11 @@
 			<version>${spring.version}</version>
 		</dependency>
 		<!-- TEST end --> 
+		<dependency>
+	      <groupId>se.jiderhamn</groupId>
+	      <artifactId>classloader-leak-prevention</artifactId>
+	     <version>1.13.0</version>
+        </dependency>
   </dependencies>
   <build>
     <finalName>site</finalName>
