@@ -52,14 +52,12 @@ public class SystemService /*extends BaseService*/  {
 			e.setParentIds(e.getParentIds().replace(oldParentIds, menu.getParentIds()));
 		}
 		menuDao.save(list);
-		//systemRealm.clearAllCachedAuthorizationInfo();
 		UserUtils.removeCache(UserUtils.CACHE_MENU_LIST);
 	}
 
 	@Transactional(readOnly = false)
 	public void deleteMenu(String id) {
 		menuDao.deleteById(id, "%,"+id+",%");
-		//systemRealm.clearAllCachedAuthorizationInfo();
 		UserUtils.removeCache(UserUtils.CACHE_MENU_LIST);
 	}	
 }
