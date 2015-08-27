@@ -54,7 +54,6 @@ public class Menu extends IdEntity<Menu> {
 	private String isShow; 	// 是否在菜单中显示（1：显示；0：不显示）
 	
 	private List<Menu> childList = Lists.newArrayList();// 拥有子菜单列表
-	//private List<Role> roleList = Lists.newArrayList(); // 拥有角色列表
 
 	public Menu(){
 		super();
